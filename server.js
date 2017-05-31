@@ -6,13 +6,25 @@ var bodyParser  = require('body-parser');
 var morgan      = require('morgan');
 var mongoose    = require('mongoose');
 var port        = process.env.PORT;
+var config 		= require('./config.js').get(process.env.NODE_ENV);
+var dbconfig    = require('./config/database'); // get db config file
+var genre 		= require('./controllers/genreController');
+var apiRoutes 	= express.Router();
 
 app.use(bodyParser.json());
+app.listen(port);
+
+// connect to mongoose
+dbconfig.connect();
+
 
 app.get('/', function(req, res){
 	res.send('Welcome Page');
 }); 
 
-app.listen(port);
+// connect the api routes under /api/*
+app.use('/api', apiRoutes);
+app.get('/api/genres', genre.allGenres);
 
 console.log('Running on port: '+port);
+console.log(process.env.NODE_ENV);
