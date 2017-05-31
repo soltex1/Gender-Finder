@@ -25,6 +25,7 @@ app.get('/', function(req, res){
 // connect the api routes under /api/*
 app.use('/api', apiRoutes);
 app.get('/api/genres', genre.allGenres);
+app.get('/api/genres/:name', genre.getGenre);
 
 console.log('Running on port: '+port);
 console.log(process.env.NODE_ENV);
