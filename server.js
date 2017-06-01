@@ -11,6 +11,7 @@ var dbconfig    = require('./config/database'); // get db config file
 var genre 		= require('./controllers/genreController');
 var apiRoutes 	= express.Router();
 
+app.use(express.static(__dirname+'/public'));
 app.use(bodyParser.json());
 app.listen(port);
 

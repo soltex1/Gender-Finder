@@ -1,0 +1,40 @@
+<div class="header">
+	<h1 class="title"> Gender Finder </h1>
+</div>
+<link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css?family=Chewy" rel="stylesheet"> 
+
+<div class="subtitle">
+	<h2> around 3,000 different names </h2>
+</div>
+
+<div class="container" ng-controller="GenresController">
+	<div class="submitbox">
+		<form ng-submit="addGenre()" class="form1">
+			<label> {{name.length}}/25 </label>
+	 		<input placeholder="enter a single name" maxlength="25" ng-submit="submit()" type="text" ng-model="name"/>
+		</form>
+ 
+ 		<form ng-submit="clear($event)" class="form2">
+	 		<button>
+	  		<span class="glyphicon glyphicon-trash" aria-hidden="true"> </span>
+			</button>
+		</form>
+ 	</div>
+
+	<div class="messages">{{message}}</div>
+
+	<div class="table1"> 
+		<ul>
+			<li ng-repeat="gender in genders">
+				<div class="closebuttondiv"><button class="closebutton" ng-click="removeContact(gender)">X</button></div>
+				<img ng-src="{{gender.value == 'male' ? '../images/man.png' : '../images/girl.png'}}">
+					<br>
+	   	 			<h3 class="name">{{gender.name}}</h3>
+	    			<h4 class="gender"> {{gender.value}}</h4>
+				</img>
+   			</li>
+ 		</ul>
+	</div>
+</div>
+
