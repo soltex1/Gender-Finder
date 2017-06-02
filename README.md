@@ -6,7 +6,7 @@
 
 ## Brief Description:
 
-Create beautiful posts for your social networks. Transform your text (limit 100 characters) into images with colorful backgrounds.
+MEAN simple application to find the gender of a first name (limited to 25 characters).
 
 ## Dependencies and Versions:
 
@@ -20,13 +20,11 @@ Create beautiful posts for your social networks. Transform your text (limit 100 
 
 For more information about dependencies, please see the file package.json.
 
-MEAN - Mongo, Express, Angular, Node
-
 ## Prerequisite
 
-Config your mongodb database and set the environment variables in order to use them in the file config/database.js
+Configure your mongodb database and set the environment variables in order to use them in the file config/database.js
 
-## End-Points
+## API End-Points
 
 ```
 /api/genres
@@ -41,4 +39,4 @@ node server or NODE_ENV 'production' node server
 
 NODE_ENV 'production' will use a different database configuration instead of the local one, you must set the environment variables.
 
-**Note:** If you need the database which contains around 3k different names, mainly portuguese, please send me an email.
+**Note:** If you need the database which contains around 3k different names, mostly in portuguese, please send me an email.
