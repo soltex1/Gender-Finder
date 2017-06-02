@@ -94,13 +94,13 @@ li{
 .subtitle{
 	width: 100%;
 	height: 100%;
-	margin-top:-25px;
+	
 	margin-bottom:20px;
 	text-align: center;
 	color:white;
 }
 .subtitle h2{
-	font-size:20px;
+	
 }
 
 input[type="text"] {
