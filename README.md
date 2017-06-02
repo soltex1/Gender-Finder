@@ -1,3 +1,5 @@
 # Gender-Finder
 
-https://safe-garden-50516.herokuapp.com/
+**DEMO:** https://safe-garden-50516.herokuapp.com/
+
+![](http://imgur.com/XylByyR.gif)
