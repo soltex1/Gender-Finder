@@ -1,6 +1,9 @@
-<div class="header">
-	<h1 class="title"> Gender Finder </h1>
-</div>
+
+
+	<div class="row">
+ 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 title">Gender Finder </div>
+	</div>
+
 <link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
 <link href="https://fonts.googleapis.com/css?family=Chewy" rel="stylesheet"> 
 
@@ -8,7 +11,7 @@
 	<h2> around 3,000 different names </h2>
 </div>
 
-<div class="container" ng-controller="GenresController">
+<div class="container" ng-controller="GenresController" style="background: pink:">
 	<div class="submitbox">
 		<form ng-submit="addGenre()" class="form1">
 			<label> {{name.length}}/25 </label>
@@ -21,20 +24,28 @@
 			</button>
 		</form>
  	</div>
+ 	<div class="row">
+ 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 messages" style="height: 40px;">{{message}}</div>
+	</div>
+	<div class="row">
 
-	<div class="messages">{{message}}</div>
+		<ng-repeat ng-repeat="gender in genders" style="">
 
-	<div class="table1"> 
-		<ul>
-			<li ng-repeat="gender in genders">
-				<div class="closebuttondiv"><button class="closebutton" ng-click="removeContact(gender)">X</button></div>
-				<img ng-src="{{gender.value == 'male' ? '../images/man.png' : '../images/girl.png'}}">
-					<br>
-	   	 			<h3 class="name">{{gender.name}}</h3>
-	    			<h4 class="gender"> {{gender.value}}</h4>
-				</img>
-   			</li>
- 		</ul>
+			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" style="padding: 0px; margin: 0px;">
+				<ul style="list-style-type: none; padding: 0; margin: 0; margin-bottom: 20px;">
+					<li style="list-style-type: none; padding: 0; margin: 0;">
+						<button class="closebutton" ng-click="removeContact(gender)">X</button><br>
+						<img ng-src="{{gender.value == 'male' ? '../images/man.png' : '../images/girl.png'}}" style="position: relative;">
+							<br>
+			   	 			<h3 class="name">{{gender.name}}</h3>
+			    			<h4 class="gender"> {{gender.value}}</h4>
+						</img>
+					</li>
+				</ul>
+			</div>
+		</ng-repeat>
+	</div>
+ 		
 	</div>
 </div>
 
