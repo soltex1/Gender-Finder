@@ -7,8 +7,6 @@ myApp.controller('GenresController',['$scope', '$http', '$location', '$route', f
   $scope.image_url = '../images/girl.png';
   $scope.genders = [
       {name: 'João',value:'male'},
-      {name:'Joana',value:'female'},
-        {name: 'João',value:'male'},
       {name:'Joana',value:'female'}
     ];
 
